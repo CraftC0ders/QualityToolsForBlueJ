@@ -1,8 +1,10 @@
 package edu.msudenver.bluejext.qualitytools;
 
+import bluej.extensions.BlueJ;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.swing.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -48,4 +50,19 @@ class QualityToolsExtensionTest {
         URL url = new URL("https://metrocs.github.io/QualityToolsForBlueJ");
         assertEquals(url, unit.getURL());
     }
+}
+
+class PreferencesTest {
+
+    private Preferences unit;
+    private BlueJ bluej;
+    private JPanel myPanel;
+
+
+    @BeforeEach
+    void setup() {
+        unit = new Preferences(bluej);
+    }
+
+
 }
